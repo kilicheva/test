@@ -10,6 +10,7 @@ class MyBot:
         # Регистрируем обработчики команд
         self.application.add_handler(CommandHandler("start", self.start))
         self.application.add_handler(CommandHandler("help", self.help))
+        self.application.add_handler(CommandHandler("info", self.info))
         self.application.run_polling(allowed_updates=Update.ALL_TYPES)
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Send a message when the command /start is issued."""
@@ -22,8 +23,8 @@ class MyBot:
 
     async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(text="Это простой бот. Он может отвечать на текстовые сообщения.")
-    async def hello(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
-            await update.message.reply_text(text="Это простой бот. Он может отвечать на текстовые сообщения.")
+    async def info(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+            await update.message.reply_text(text="Хех, привет! Моего разработчика зовут Micheal. Ему 13 лет. Он создал меня, чтобы Вы могли со мной общаться...")
 
 
 if __name__ == "__main__":
