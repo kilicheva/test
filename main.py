@@ -24,6 +24,8 @@ class MyBot:
         await update.message.reply_text(text="Это простой бот. Он может отвечать на текстовые сообщения.")
     async def hello(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(text="Это простой бот. Он может отвечать на текстовые сообщения.")
+    async def hello_S(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+            await update.message.reply_text(text="Это простой бот. Он может отвечать на текстовые сообщения.")
 
 
 if __name__ == "__main__":
